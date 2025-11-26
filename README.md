@@ -1,70 +1,47 @@
-# Linear Filters and Convolution
+# Linear-Filters-And-Convolution
 
-This repository is an educational collection of code, notebooks, and examples demonstrating the principles and applications of linear filters and convolution for 1D and 2D signals. It is intended for students, researchers, and developers who want a hands-on reference for how convolution works and how common linear filters are implemented and applied (for example, in image and audio processing).
-
-## Purpose
-
-- Explain the theory behind linear filters and convolution.
-- Provide reference implementations of common kernels (e.g., smoothing, sharpening, edge detection, Gaussian).
-- Demonstrate 1D and 2D convolution through runnable examples and visualizations.
-- Serve as a foundation for experimenting with filters and building more advanced signal/image-processing pipelines.
+This repository contains Python code and resources related to applying linear filters and convolution, commonly used in image processing and computer vision applications.
 
 ## Repository Structure
 
-- notebooks/    - Jupyter notebooks with explanations and interactive examples.
-- src/          - Reference implementations and utility scripts.
-- examples/     - Example inputs and scripts that demonstrate usage and expected outputs.
-- data/         - (Optional) sample data used by the notebooks and examples.
+- `cca1.py`: Main Python script implementing linear filters and convolution operations.
+- `LICENSE`: MIT License.
+- `README.md`: Project documentation (this file).
 
-(If any of these directories are not present yet, they are suggested places to add content.)
+## Features
 
-## Requirements
+- Implements standard linear (spatial) filters on images using convolution.
+- Can serve as a reference or starting point for understanding filtering concepts in image processing.
 
-- Python 3.8+
-- Common libraries: numpy, scipy, matplotlib, jupyter (install with pip if needed)
+## Dependencies
 
-Basic install (example):
+The repository is written in Python. To run the main script, you may need the following libraries:
+- `numpy`
+- `scipy`
+- `matplotlib`
+- `Pillow` or `opencv-python` (for image loading and saving)
 
+Install them using pip:
 ```bash
-python -m venv .venv
-source .venv/bin/activate    # on Windows: .venv\Scripts\activate
-pip install --upgrade pip
-pip install numpy scipy matplotlib jupyter
+pip install numpy scipy matplotlib pillow
 ```
 
-If a `requirements.txt` exists, install with:
+## Example Usage
 
-```bash
-pip install -r requirements.txt
-```
+1. Edit or use `cca1.py` to apply convolutional filters to your images.
+2. Example function usage (from inside `cca1.py`):
+    ```python
+    import numpy as np
+    from cca1 import apply_filter
 
-## Usage
+    result = apply_filter(image_array, filter_kernel)
+    ```
 
-- Open and run the notebooks in the `notebooks/` directory to follow the explanations and visual demonstrations.
-- Run example scripts from `src/` or `examples/` to reproduce results from the notebooks.
-- Use the reference implementations as a starting point for custom filters or larger pipelines.
-
-Example (running a notebook):
-
-```bash
-jupyter notebook notebooks/Convolution_and_Filters.ipynb
-```
-
-## Contributing
-
-Contributions are welcome. Please open an issue or submit a pull request with a clear description of the change. Suggested ways to contribute:
-
-- Add or improve explanations in the notebooks.
-- Provide additional example data or scripts.
-- Add unit tests or validation scripts for filter implementations.
+Check the comments and functions in `cca1.py` for detailed usage.
 
 ## License
 
-This repository does not include an explicit license file by default. If you wish to apply a license, add a LICENSE file to the repository (for example, MIT).
-
-## Contact
-
-For questions or issues, please use the repository's GitHub Issues.
+This project is open source under the MIT License. See `LICENSE` for details.
 
 ---
-
+*Project repository: https://github.com/em-k-049/Linear-Filters-And-Convolution*
